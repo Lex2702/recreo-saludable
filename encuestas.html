@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encuestas - Recreo Saludable</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+
+
+<style>
+
+/* =========================================================
+   ENCUESTAS
+========================================================= */
+
+.pagina-encuestas {
+
+    background:
+        radial-gradient(circle at 10% 10%, #d4f4ff, transparent 30%),
+        radial-gradient(circle at 90% 80%, #b8e8ff, transparent 30%),
+        #f2fbff;
+
+    padding: 90px 6%;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.encuestas-intro {
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.encuestas-etiqueta {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #087c82;
+}
+
+.encuestas-intro h1 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 85px;
+
+    line-height: 0.95;
+
+    letter-spacing: 3px;
+
+    margin: 20px 0;
+
+    color: #17372b;
+}
+
+.encuestas-intro h1 span {
+
+    color: #087c82;
+}
+
+.encuestas-intro > p:last-child {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    color: #30483b;
+}
+
+
+/* =========================
+   CANTIDAD DE ESTUDIANTES
+========================= */
+
+.resumen-encuestas {
+
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+.numero-grado {
+
+    background: white;
+
+    border: 3px solid #07949b;
+
+    border-radius: 20px;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 100, 105, 0.12);
+}
+
+.numero-grado strong {
+
+    display: block;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 42px;
+
+    color: #087c82;
+}
+
+.numero-grado span {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #53635d;
+}
+
+
+/* =========================
+   PREGUNTAS
+========================= */
+
+.pregunta-encuesta {
+
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+
+    background: white;
+
+    border: 4px solid #07949b;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow: 0 12px 28px rgba(0, 100, 105, 0.12);
+}
+
+.numero-pregunta {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #07949b;
+}
+
+.pregunta-encuesta h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #17372b;
+
+    margin: 10px 0 30px;
+}
+
+
+/* =========================
+   GRÁFICOS
+========================= */
+
+.grafico {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.fila-grafico {
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.nombre-opcion {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #30483b;
+}
+
+.barras {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.barra {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.barra span {
+
+    width: 32px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #52635a;
+}
+
+.barra-linea {
+
+    height: 24px;
+
+    border-radius: 6px;
+
+    min-width: 3px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* COLORES DE CADA GRADO */
+
+.grado1 {
+    background: #198754;
+}
+
+.grado2 {
+    background: #087c82;
+}
+
+.grado3 {
+    background: #e0a800;
+}
+
+.grado4 {
+    background: #d87900;
+}
+
+.grado5 {
+    background: #c92f2f;
+}
+
+
+/* =========================
+   LEYENDA
+========================= */
+
+.leyenda {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 30px 0 0;
+
+    padding-top: 25px;
+
+    border-top: 2px solid #edf2ef;
+}
+
+.leyenda-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.cuadro {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   CONCLUSIONES
+========================= */
+
+.conclusiones-encuesta {
+
+    max-width: 1050px;
+
+    margin: 90px auto 20px;
+
+    padding: 60px 50px;
+
+    background: #17372b;
+
+    border-radius: 30px;
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow: 0 18px 35px rgba(0, 50, 30, 0.2);
+}
+
+.conclusiones-encuesta h2 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 58px;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0 25px;
+}
+
+.conclusiones-encuesta h2 span {
+
+    color: #ffd166;
+}
+
+.conclusiones-encuesta p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FRASE FINAL
+========================= */
+
+.frase-encuestas {
+
+    max-width: 950px;
+
+    margin: 70px auto 10px;
+
+    padding: 40px;
+
+    background: #087c82;
+
+    color: white;
+
+    border: 4px solid #055b60;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 12px 25px rgba(0, 100, 105, 0.2);
+}
+
+.frase-encuestas p {
+
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media(max-width: 800px) {
+
+    .pagina-encuestas {
+
+        padding: 60px 20px;
+    }
+
+    .encuestas-intro h1 {
+
+        font-size: 60px;
+    }
+
+    .resumen-encuestas {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pregunta-encuesta {
+
+        padding: 25px 18px;
+    }
+
+    .pregunta-encuesta h2 {
+
+        font-size: 20px;
+    }
+
+    .fila-grafico {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .nombre-opcion {
+
+        font-size: 13px;
+    }
+
+    .conclusiones-encuesta {
+
+        padding: 45px 25px;
+    }
+
+    .conclusiones-encuesta h2 {
+
+        font-size: 43px;
+    }
+
+    .frase-encuestas {
+
+        padding: 30px 20px;
+    }
+
+    .frase-encuestas p {
+
+        font-size: 21px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        RECREO SALUDABLE
+
+        <span>
+            ELIGE · LEE · COMUNICA
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+
+        <a href="alimentacion.html">
+            Alimentación
+        </a>
+
+        <a href="consecuencias.html">
+            Consecuencias
+        </a>
+
+        <a href="beneficios.html">
+            Beneficios
+        </a>
+
+        <a href="colegio.html">
+            Recreo
+        </a>
+
+        <a href="etiquetas.html">
+            Etiquetas
+        </a>
+
+        <a class="activo" href="encuestas.html">
+            Encuestas
+        </a>
+
+        <a href="evidencias.html">
+            Evidencias
+        </a>
+
+        <a href="triptico.html">
+            Tríptico
+        </a>
+
+        <a href="final.html">
+            Final
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="pagina-encuestas">
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section class="encuestas-intro">
+
+    <p class="encuestas-etiqueta">
+        CONOZCAMOS NUESTRA REALIDAD
+    </p>
+
+    <h1>
+        ¿QUÉ PIENSAN NUESTROS
+        <span>ESTUDIANTES?</span>
+    </h1>
+
+    <p>
+        Para conocer los hábitos y decisiones de los estudiantes
+        durante el recreo, realizamos una encuesta sobre sus
+        preferencias, consumo de productos, lectura de etiquetas
+        y factores que influyen en sus decisiones.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     PARTICIPANTES
+===================================================== -->
+
+<section class="resumen-encuestas">
+
+    <div class="numero-grado">
+
+        <strong>31</strong>
+
+        <span>
+            1.º SECUNDARIA
+        </span>
+
+    </div>
+
+
+    <div class="numero-grado">
+
+        <strong>21</strong>
+
+        <span>
+            2.º SECUNDARIA
+        </span>
+
+    </div>
+
+
+    <div class="numero-grado">
+
+        <strong>17</strong>
+
+        <span>
+            3.º SECUNDARIA
+        </span>
+
+    </div>
+
+
+    <div class="numero-grado">
+
+        <strong>28</strong>
+
+        <span>
+            4.º SECUNDARIA
+        </span>
+
+    </div>
+
+
+    <div class="numero-grado">
+
+        <strong>15</strong>
+
+        <span>
+            5.º SECUNDARIA
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 1
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 01
+    </span>
+
+    <h2>
+        ¿Qué consumes con menor frecuencia durante el recreo?
+    </h2>
+
+    <div class="grafico" id="pregunta1"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 2
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 02
+    </span>
+
+    <h2>
+        ¿Con qué frecuencia consumes estos productos ultraprocesados?
+    </h2>
+
+    <div class="grafico" id="pregunta2"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 3
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 03
+    </span>
+
+    <h2>
+        ¿Cuál es la razón principal por la que consumes estos productos?
+    </h2>
+
+    <div class="grafico" id="pregunta3"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 4
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 04
+    </span>
+
+    <h2>
+        Al momento de comprar, ¿qué es lo que más te llama la atención?
+    </h2>
+
+    <div class="grafico" id="pregunta4"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 5
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 05
+    </span>
+
+    <h2>
+        ¿Suelen leer la etiqueta de los productos antes de comprarlos?
+    </h2>
+
+    <div class="grafico" id="pregunta5"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 6
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 06
+    </span>
+
+    <h2>
+        ¿Sabes qué significan los octógonos de advertencia?
+    </h2>
+
+    <div class="grafico" id="pregunta6"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 7
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 07
+    </span>
+
+    <h2>
+        ¿Qué tanto influye la publicidad en los productos que eliges?
+    </h2>
+
+    <div class="grafico" id="pregunta7"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 8
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 08
+    </span>
+
+    <h2>
+        ¿Qué tiene más influencia en tus decisiones sobre qué comer?
+    </h2>
+
+    <div class="grafico" id="pregunta8"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 9
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 09
+    </span>
+
+    <h2>
+        ¿Qué alternativa saludable consumirías con mayor facilidad en el recreo?
+    </h2>
+
+    <div class="grafico" id="pregunta9"></div>
+
+</section>
+
+
+<!-- =====================================================
+     PREGUNTA 10
+===================================================== -->
+
+<section class="pregunta-encuesta">
+
+    <span class="numero-pregunta">
+        PREGUNTA 10
+    </span>
+
+    <h2>
+        ¿Crees que una charla sobre alimentación saludable podría ayudarte a tomar mejores decisiones?
+    </h2>
+
+    <div class="grafico" id="pregunta10"></div>
+
+</section>
+
+
+<!-- =====================================================
+     CONCLUSIONES
+===================================================== -->
+
+<section class="conclusiones-encuesta">
+
+    <p class="encuestas-etiqueta">
+        ¿QUÉ APRENDIMOS?
+    </p>
+
+    <h2>
+        CONOCER NUESTRA
+        <span>REALIDAD</span>
+    </h2>
+
+    <p>
+        Los resultados nos permiten conocer mejor los hábitos,
+        preferencias y factores que influyen en las decisiones
+        de los estudiantes durante el recreo.
+        Esta información nos ayuda a identificar qué aspectos
+        debemos considerar para nuestra campaña de alimentación
+        saludable.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     FRASE FINAL
+===================================================== -->
+
+<section class="frase-encuestas">
+
+    <p>
+        “Conocer nuestra realidad es el primer paso para comunicar una solución.”
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <h3>
+        RECREO SALUDABLE
+    </h3>
+
+    <p>
+        I.E. 3014 Leoncio Prado
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   DATOS DE LAS ENCUESTAS
+========================================================= */
+
+/*
+   Cada grupo corresponde a:
+
+   1.º = 31
+   2.º = 21
+   3.º = 17
+   4.º = 28
+   5.º = 15
+*/
+
+
+const encuestas = {
+
+
+/* PREGUNTA 1 */
+
+pregunta1: [
+
+    ["Sándwich", 15, 5, 5, 8, 4],
+
+    ["Frutas", 5, 3, 3, 5, 3],
+
+    ["Papas fritas / snacks", 5, 2, 2, 4, 2],
+
+    ["Agua", 4, 6, 3, 5, 3],
+
+    ["Gaseosa", 1, 3, 2, 3, 1],
+
+    ["Golosinas", 1, 2, 2, 3, 2]
+
+],
+
+
+/* PREGUNTA 2 */
+
+pregunta2: [
+
+    ["Todos los días", 2, 3, 2, 4, 2],
+
+    ["3 a 4 veces por semana", 5, 6, 4, 7, 4],
+
+    ["1 a 2 veces por semana", 18, 7, 7, 11, 6],
+
+    ["Casi nunca", 5, 5, 4, 6, 3]
+
+],
+
+
+/* PREGUNTA 3 */
+
+pregunta3: [
+
+    ["Les gusta su sabor", 10, 8, 6, 10, 5],
+
+    ["Son económicos", 4, 3, 2, 5, 2],
+
+    ["Son fáciles de conseguir", 7, 3, 4, 6, 3],
+
+    ["Es lo único disponible", 2, 0, 1, 2, 1],
+
+    ["Ya es costumbre", 8, 7, 4, 5, 4]
+
+],
+
+
+/* PREGUNTA 4 */
+
+pregunta4: [
+
+    ["Empaque / presentación", 3, 2, 2, 3, 2],
+
+    ["Oferta o promoción", 3, 1, 2, 4, 2],
+
+    ["Marca conocida", 4, 3, 2, 4, 2],
+
+    ["Información nutricional", 7, 6, 4, 7, 4],
+
+    ["Precio", 14, 9, 7, 10, 5]
+
+],
+
+
+/* PREGUNTA 5 */
+
+pregunta5: [
+
+    ["Siempre", 4, 3, 3, 6, 3],
+
+    ["A veces", 13, 9, 7, 12, 6],
+
+    ["Casi nunca", 8, 6, 5, 6, 4],
+
+    ["Nunca", 6, 3, 2, 4, 2]
+
+],
+
+
+/* PREGUNTA 6 */
+
+pregunta6: [
+
+    ["Sí, los conozco", 10, 9, 5, 13, 7],
+
+    ["Conozco algunos", 7, 4, 4, 7, 3],
+
+    ["Los he visto, pero no sé qué significan", 9, 8, 6, 6, 4],
+
+    ["No los conozco", 5, 0, 2, 2, 1]
+
+],
+
+
+/* PREGUNTA 7 */
+
+pregunta7: [
+
+    ["Mucho", 5, 8, 4, 7, 4],
+
+    ["Algo", 9, 6, 5, 9, 4],
+
+    ["Poco", 8, 7, 5, 8, 4],
+
+    ["Nada", 5, 0, 2, 3, 2],
+
+    ["No estoy seguro", 4, 0, 1, 1, 1]
+
+],
+
+
+/* PREGUNTA 8 */
+
+pregunta8: [
+
+    ["Yo mismo", 2, 11, 5, 13, 7],
+
+    ["Mi familia", 9, 5, 4, 8, 4],
+
+    ["Mis amigos", 5, 1, 3, 3, 2],
+
+    ["Mis profesores", 1, 0, 1, 1, 0],
+
+    ["Nadie en especial", 4, 4, 4, 3, 2]
+
+],
+
+
+/* PREGUNTA 9 */
+
+pregunta9: [
+
+    ["Frutas", 8, 3, 3, 7, 3],
+
+    ["Agua", 7, 9, 5, 10, 5],
+
+    ["Sándwich", 9, 5, 4, 6, 4],
+
+    ["Yogur", 5, 3, 3, 4, 2],
+
+    ["Frutos secos", 2, 1, 2, 1, 1]
+
+],
+
+
+/* PREGUNTA 10 */
+
+pregunta10: [
+
+    ["Sí, mucho", 10, 7, 6, 12, 6],
+
+    ["Sí, un poco", 8, 6, 4, 7, 4],
+
+    ["Tal vez", 9, 5, 5, 6, 3],
+
+    ["No", 4, 3, 2, 3, 2]
+
+]
+
+};
+
+
+/* =========================================================
+   CREAR GRÁFICOS
+========================================================= */
+
+function crearGrafico(id, datos) {
+
+    const contenedor =
+        document.getElementById(id);
+
+
+    datos.forEach(function(opcion) {
+
+        const fila =
+            document.createElement("div");
+
+        fila.className =
+            "fila-grafico";
+
+
+        const nombre =
+            document.createElement("div");
+
+        nombre.className =
+            "nombre-opcion";
+
+        nombre.textContent =
+            opcion[0];
+
+
+        const barras =
+            document.createElement("div");
+
+        barras.className =
+            "barras";
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            const barra =
+                document.createElement("div");
+
+            barra.className =
+                "barra";
+
+
+            const numero =
+                document.createElement("span");
+
+            numero.textContent =
+                opcion[i];
+
+
+            const linea =
+                document.createElement("div");
+
+            linea.className =
+                "barra-linea grado" + i;
+
+
+            /*
+                31 es el mayor número
+                de participantes de un grado.
+            */
+
+            const ancho =
+                (opcion[i] / 31) * 100;
+
+
+            linea.style.width =
+                Math.max(ancho, 1) + "%";
+
+
+            barra.appendChild(numero);
+
+            barra.appendChild(linea);
+
+            barras.appendChild(barra);
+
+        }
+
+
+        fila.appendChild(nombre);
+
+        fila.appendChild(barras);
+
+        contenedor.appendChild(fila);
+
+    });
+
+
+    /* LEYENDA */
+
+    const leyenda =
+        document.createElement("div");
+
+    leyenda.className =
+        "leyenda";
+
+
+    const grados = [
+
+        ["1.º", "grado1"],
+
+        ["2.º", "grado2"],
+
+        ["3.º", "grado3"],
+
+        ["4.º", "grado4"],
+
+        ["5.º", "grado5"]
+
+    ];
+
+
+    grados.forEach(function(grado) {
+
+        const elemento =
+            document.createElement("div");
+
+        elemento.className =
+            "leyenda-item";
+
+
+        const cuadro =
+            document.createElement("div");
+
+        cuadro.className =
+            "cuadro " + grado[1];
+
+
+        const texto =
+            document.createElement("span");
+
+        texto.textContent =
+            grado[0] + " secundaria";
+
+
+        elemento.appendChild(cuadro);
+
+        elemento.appendChild(texto);
+
+        leyenda.appendChild(elemento);
+
+    });
+
+
+    contenedor.appendChild(leyenda);
+
+}
+
+
+/* =========================================================
+   MOSTRAR TODAS LAS PREGUNTAS
+========================================================= */
+
+crearGrafico(
+    "pregunta1",
+    encuestas.pregunta1
+);
+
+crearGrafico(
+    "pregunta2",
+    encuestas.pregunta2
+);
+
+crearGrafico(
+    "pregunta3",
+    encuestas.pregunta3
+);
+
+crearGrafico(
+    "pregunta4",
+    encuestas.pregunta4
+);
+
+crearGrafico(
+    "pregunta5",
+    encuestas.pregunta5
+);
+
+crearGrafico(
+    "pregunta6",
+    encuestas.pregunta6
+);
+
+crearGrafico(
+    "pregunta7",
+    encuestas.pregunta7
+);
+
+crearGrafico(
+    "pregunta8",
+    encuestas.pregunta8
+);
+
+crearGrafico(
+    "pregunta9",
+    encuestas.pregunta9
+);
+
+crearGrafico(
+    "pregunta10",
+    encuestas.pregunta10
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Etiquetas - Recreo Saludable</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MENÚ
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+
+        RECREO SALUDABLE
+
+        <span>
+            ELIGE · LEE · COMUNICA
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="alimentacion.html">
+            Alimentación
+        </a>
+
+        <a href="consecuencias.html">
+            Consecuencias
+        </a>
+
+        <a href="beneficios.html">
+            Beneficios
+        </a>
+
+        <a href="colegio.html">
+            Recreo
+        </a>
+
+        <a class="activo" href="etiquetas.html">
+            Etiquetas
+        </a>
+
+        <a href="encuestas.html">
+            Encuestas
+        </a>
+
+        <a href="evidencias.html">
+            Evidencias
+        </a>
+
+        <a href="triptico.html">
+            Tríptico
+        </a>
+
+        <a href="final.html">
+            Final
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="etiquetas">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="etiquetas-hero">
+
+    <p class="etiquetas-etiqueta">
+        ANTES DE ELEGIR
+    </p>
+
+
+    <h1>
+
+        APRENDE A
+        <span>LEER</span>
+
+    </h1>
+
+
+    <p>
+
+        Antes de comprar o consumir un producto,
+        podemos revisar su etiqueta para conocer
+        mejor lo que estamos eligiendo.
+
+    </p>
+
+
+    <a href="#octogonos" class="boton-etiquetas">
+
+        APRENDER ↓
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     ¿QUÉ SON LOS OCTÓGONOS?
+===================================================== -->
+
+<section id="octogonos" class="seccion-octogonos">
+
+
+    <div class="titulo-etiquetas">
+
+        <p class="etiquetas-etiqueta">
+            CONOCE LA INFORMACIÓN
+        </p>
+
+
+        <h2>
+
+            ¿QUÉ SON LOS
+            <span>OCTÓGONOS?</span>
+
+        </h2>
+
+
+        <p>
+
+            Los octógonos de advertencia nos ayudan a identificar
+            rápidamente cuando un producto contiene cantidades
+            elevadas de determinados nutrientes críticos.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="octogonos-contenedor">
+
+
+        <!-- AZÚCAR -->
+
+        <article
+            class="octogono-card"
+            onclick="mostrarOctogono('azucar')"
+        >
+
+            <div class="octogono-icono">
+                ALTO EN
+                <strong>AZÚCAR</strong>
+            </div>
+
+
+            <h3>
+                AZÚCAR
+            </h3>
+
+
+            <p>
+                Presiona para conocer más
+            </p>
+
+
+            <div
+                id="azucar"
+                class="octogono-info"
+            >
+
+                <p>
+
+                    Indica que el producto contiene una
+                    cantidad elevada de azúcar.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SODIO -->
+
+        <article
+            class="octogono-card"
+            onclick="mostrarOctogono('sodio')"
+        >
+
+            <div class="octogono-icono">
+                ALTO EN
+                <strong>SODIO</strong>
+            </div>
+
+
+            <h3>
+                SODIO
+            </h3>
+
+
+            <p>
+                Presiona para conocer más
+            </p>
+
+
+            <div
+                id="sodio"
+                class="octogono-info"
+            >
+
+                <p>
+
+                    Indica que el producto contiene una
+                    cantidad elevada de sodio.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- GRASAS SATURADAS -->
+
+        <article
+            class="octogono-card"
+            onclick="mostrarOctogono('grasas')"
+        >
+
+            <div class="octogono-icono">
+                ALTO EN
+                <strong>GRASAS<br>SATURADAS</strong>
+            </div>
+
+
+            <h3>
+                GRASAS SATURADAS
+            </h3>
+
+
+            <p>
+                Presiona para conocer más
+            </p>
+
+
+            <div
+                id="grasas"
+                class="octogono-info"
+            >
+
+                <p>
+
+                    Indica que el producto contiene una
+                    cantidad elevada de grasas saturadas.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- GRASAS TRANS -->
+
+        <article
+            class="octogono-card"
+            onclick="mostrarOctogono('trans')"
+        >
+
+            <div class="octogono-icono">
+                CONTIENE
+                <strong>GRASAS<br>TRANS</strong>
+            </div>
+
+
+            <h3>
+                GRASAS TRANS
+            </h3>
+
+
+            <p>
+                Presiona para conocer más
+            </p>
+
+
+            <div
+                id="trans"
+                class="octogono-info"
+            >
+
+                <p>
+
+                    Señala la presencia de grasas trans
+                    en el producto.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     APRENDE A OBSERVAR UNA ETIQUETA
+===================================================== -->
+
+<section class="leer-etiqueta">
+
+
+    <div class="titulo-etiquetas">
+
+        <p class="etiquetas-etiqueta">
+            OBSERVA CON ATENCIÓN
+        </p>
+
+
+        <h2>
+
+            NO MIRES SOLO EL
+            <span>ENVASE</span>
+
+        </h2>
+
+
+        <p>
+
+            La información del producto puede ayudarnos
+            a comparar diferentes opciones antes de elegir.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="etiqueta-interactiva">
+
+
+        <div class="producto-imagen">
+
+            <img
+                src="imagenes/etiqueta-producto.png"
+                alt="Etiqueta de un producto"
+            >
+
+        </div>
+
+
+
+        <div class="puntos-informacion">
+
+
+            <button
+                onclick="mostrarDato('dato1')"
+                class="punto"
+            >
+                1
+            </button>
+
+
+            <button
+                onclick="mostrarDato('dato2')"
+                class="punto"
+            >
+                2
+            </button>
+
+
+            <button
+                onclick="mostrarDato('dato3')"
+                class="punto"
+            >
+                3
+            </button>
+
+
+            <button
+                onclick="mostrarDato('dato4')"
+                class="punto"
+            >
+                4
+            </button>
+
+
+        </div>
+
+
+
+        <div class="datos-etiqueta">
+
+
+            <div
+                id="dato1"
+                class="dato"
+            >
+
+                <h3>
+                    INGREDIENTES
+                </h3>
+
+                <p>
+
+                    Podemos revisar qué ingredientes
+                    contiene el producto y observar
+                    cuáles aparecen primero.
+
+                </p>
+
+            </div>
+
+
+
+            <div
+                id="dato2"
+                class="dato"
+            >
+
+                <h3>
+                    INFORMACIÓN NUTRICIONAL
+                </h3>
+
+                <p>
+
+                    Permite conocer la cantidad de
+                    nutrientes presentes en una porción.
+
+                </p>
+
+            </div>
+
+
+
+            <div
+                id="dato3"
+                class="dato"
+            >
+
+                <h3>
+                    OCTÓGONOS
+                </h3>
+
+                <p>
+
+                    Nos permiten identificar rápidamente
+                    determinadas advertencias nutricionales.
+
+                </p>
+
+            </div>
+
+
+
+            <div
+                id="dato4"
+                class="dato"
+            >
+
+                <h3>
+                    PORCIÓN
+                </h3>
+
+                <p>
+
+                    Es importante observar a qué cantidad
+                    de producto corresponde la información.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ¿QUÉ HARÍAS TÚ?
+===================================================== -->
+
+<section class="elige-etiqueta">
+
+
+    <div class="titulo-etiquetas">
+
+        <p class="etiquetas-etiqueta">
+            AHORA TE TOCA A TI
+        </p>
+
+
+        <h2>
+
+            ¿QUÉ PRODUCTO
+            <span>ELEGIRÍAS?</span>
+
+        </h2>
+
+
+        <p>
+
+            Observa las dos opciones y piensa qué información
+            revisarías antes de tomar una decisión.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="productos-comparacion">
+
+
+        <!-- PRODUCTO A -->
+
+        <div class="producto-card">
+
+            <h3>
+                OPCIÓN A
+            </h3>
+
+
+            <img
+                src="imagenes/producto-a.png"
+                alt="Producto A"
+            >
+
+
+            <button onclick="elegirProducto('respuestaA')">
+
+                ELEGIR ESTA OPCIÓN
+
+            </button>
+
+
+            <div
+                id="respuestaA"
+                class="respuesta-producto"
+            >
+
+                <p>
+
+                    Antes de elegir, revisa los octógonos,
+                    ingredientes e información nutricional.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCTO B -->
+
+        <div class="producto-card">
+
+            <h3>
+                OPCIÓN B
+            </h3>
+
+
+            <img
+                src="imagenes/producto-b.png"
+                alt="Producto B"
+            >
+
+
+            <button onclick="elegirProducto('respuestaB')">
+
+                ELEGIR ESTA OPCIÓN
+
+            </button>
+
+
+            <div
+                id="respuestaB"
+                class="respuesta-producto"
+            >
+
+                <p>
+
+                    No debemos decidir solamente por la apariencia.
+                    Comparar la información puede ayudarnos a elegir
+                    de manera más informada.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FRASE FINAL
+===================================================== -->
+
+<section class="frase-etiquetas">
+
+    <p>
+
+        “Leer la etiqueta también es parte de elegir mejor.”
+
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h3>
+        RECREO SALUDABLE
+    </h3>
+
+
+    <p>
+        I.E. 3014 Leoncio Prado
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   OCTÓGONOS
+===================================================== */
+
+function mostrarOctogono(id) {
+
+    const elemento =
+        document.getElementById(id);
+
+    elemento.classList.toggle("mostrar");
+
+}
+
+
+
+/* =====================================================
+   INFORMACIÓN DE LA ETIQUETA
+===================================================== */
+
+function mostrarDato(id) {
+
+    const datos =
+        document.querySelectorAll(".dato");
+
+    datos.forEach(function(dato) {
+
+        dato.classList.remove("mostrar");
+
+    });
+
+
+    const seleccionado =
+        document.getElementById(id);
+
+    seleccionado.classList.add("mostrar");
+
+}
+
+
+
+/* =====================================================
+   ELECCIÓN DE PRODUCTO
+===================================================== */
+
+function elegirProducto(id) {
+
+    const respuestas =
+        document.querySelectorAll(".respuesta-producto");
+
+    respuestas.forEach(function(respuesta) {
+
+        respuesta.classList.remove("mostrar");
+
+    });
+
+
+    const respuesta =
+        document.getElementById(id);
+
+    respuesta.classList.add("mostrar");
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

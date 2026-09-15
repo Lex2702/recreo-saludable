@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recreo - Recreo Saludable</title>
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        RECREO SALUDABLE
+        <span>ELIGE · LEE · COMUNICA</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="alimentacion.html">Alimentación</a>
+        <a href="consecuencias.html">Consecuencias</a>
+        <a href="beneficios.html">Beneficios</a>
+        <a class="activo" href="colegio.html">Recreo</a>
+        <a href="etiquetas.html">Etiquetas</a>
+        <a href="encuestas.html">Encuestas</a>
+        <a href="evidencias.html">Evidencias</a>
+        <a href="triptico.html">Tríptico</a>
+        <a href="final.html">Final</a>
+    </nav>
+
+</header>
+
+
+<main class="recreo">
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="recreo-hero">
+
+        <p class="etiqueta">
+            DURANTE EL RECREO
+        </p>
+
+        <h1>
+            TU RECREO,
+            <span>TU ELECCIÓN</span>
+        </h1>
+
+        <p>
+            Descubre algunas opciones que podemos considerar durante
+            el recreo y aprende a tomar decisiones más informadas.
+        </p>
+
+        <a href="#opciones" class="boton-recreo">
+            VER OPCIONES ↓
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================
+         VIDEO PRINCIPAL
+    ========================================= -->
+
+    <section class="video-seccion">
+
+        <div class="titulo-seccion">
+
+            <p class="etiqueta">
+                MIRA Y REFLEXIONA
+            </p>
+
+            <h2>
+                ¿QUÉ PASA DURANTE
+                <span>NUESTRO RECREO?</span>
+            </h2>
+
+            <p>
+                Observa el video y reflexiona sobre las decisiones
+                que tomamos cuando elegimos qué consumir.
+            </p>
+
+        </div>
+
+
+        <div class="video-contenedor">
+
+            <video controls>
+
+                <source
+                    src="videos/recreo.mp4"
+                    type="video/mp4"
+                >
+
+                Tu navegador no puede reproducir este video.
+
+            </video>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         OPCIONES
+    ========================================= -->
+
+    <section id="opciones" class="opciones">
+
+        <div class="titulo-seccion">
+
+            <p class="etiqueta">
+                ALGUNAS ALTERNATIVAS
+            </p>
+
+            <h2>
+                ¿QUÉ PODEMOS
+                <span>CONSUMIR?</span>
+            </h2>
+
+            <p>
+                Selecciona una categoría para comparar dos opciones
+                y reflexionar antes de elegir.
+            </p>
+
+        </div>
+
+
+        <div class="tarjetas-opciones">
+
+
+            <!-- FRUTAS -->
+
+            <article class="tarjeta-opcion">
+
+                <img
+                    src="imagenes/frutas.png"
+                    alt="Frutas"
+                >
+
+                <div class="tarjeta-contenido">
+
+                    <h3>
+                        Frutas
+                    </h3>
+
+                    <p>
+                        Una alternativa práctica que puede formar parte
+                        de una alimentación variada.
+                    </p>
+
+                    <button onclick="mostrarComparacion('frutas')">
+                        VER MÁS
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- AGUA -->
+
+            <article class="tarjeta-opcion">
+
+                <img
+                    src="imagenes/agua.png"
+                    alt="Agua"
+                >
+
+                <div class="tarjeta-contenido">
+
+                    <h3>
+                        Agua
+                    </h3>
+
+                    <p>
+                        Una opción sencilla para acompañar nuestra
+                        jornada escolar.
+                    </p>
+
+                    <button onclick="mostrarComparacion('agua')">
+                        VER MÁS
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- HELADOS -->
+
+            <article class="tarjeta-opcion">
+
+                <img
+                    src="imagenes/helados.png"
+                    alt="Helados"
+                >
+
+                <div class="tarjeta-contenido">
+
+                    <h3>
+                        Helados
+                    </h3>
+
+                    <p>
+                        Podemos comparar diferentes tipos de helados
+                        antes de elegir.
+                    </p>
+
+                    <button onclick="mostrarComparacion('helados')">
+                        VER MÁS
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- COMIDAS -->
+
+            <article class="tarjeta-opcion">
+
+                <img
+                    src="imagenes/comidas.png"
+                    alt="Comidas"
+                >
+
+                <div class="tarjeta-contenido">
+
+                    <h3>
+                        Comidas
+                    </h3>
+
+                    <p>
+                        Analicemos diferentes opciones de comida
+                        para nuestro recreo.
+                    </p>
+
+                    <button onclick="mostrarComparacion('comidas')">
+                        VER MÁS
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         COMPARACIÓN INTERACTIVA
+    ========================================= -->
+
+    <section
+        id="comparacion"
+        class="info-interactiva"
+    >
+
+        <div class="info-caja">
+
+            <p class="etiqueta">
+                COMPARA Y ELIGE
+            </p>
+
+            <h2 id="titulo-info">
+                ELIGE UNA CATEGORÍA
+            </h2>
+
+            <p id="texto-info">
+                Presiona “VER MÁS” en una categoría para comenzar.
+            </p>
+
+
+            <div
+                id="comparacion-opciones"
+                class="comparacion-interactiva"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FRASE FINAL
+    ========================================= -->
+
+    <section class="frase-recreo">
+
+        <p>
+            "Una alimentación saludable comienza con una buena elección"
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <h3>
+        RECREO SALUDABLE
+    </h3>
+
+    <p>
+        I.E. 3014 Leoncio Prado
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+function mostrarComparacion(opcion) {
+
+    const titulo =
+        document.getElementById("titulo-info");
+
+    const texto =
+        document.getElementById("texto-info");
+
+    const comparacion =
+        document.getElementById("comparacion-opciones");
+
+    const seccionComparacion =
+        document.getElementById("comparacion");
+
+
+
+    /* =========================================
+       FRUTAS
+    ========================================= */
+
+    if (opcion === "frutas") {
+
+        titulo.textContent = "FRUTAS";
+
+        texto.textContent =
+            "Presiona una de las imágenes para conocer más sobre cada opción.";
+
+
+        comparacion.innerHTML = `
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN A
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/fruta-a.png"
+                    alt="Fruta fresca"
+                    onclick="mostrarTexto('frutaA')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="frutaA"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        BENEFICIOS
+                    </h4>
+
+                    <p>
+                        Las frutas aportan vitaminas, minerales,
+                        fibra y agua. Pueden formar parte de una
+                        alimentación variada y ser una alternativa
+                        práctica para nuestro recreo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN B
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/fruta-b.png"
+                    alt="Producto menos nutritivo"
+                    onclick="mostrarTexto('frutaB')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="frutaB"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        ¿QUÉ DEBEMOS CONSIDERAR?
+                    </h4>
+
+                    <p>
+                        Algunos productos con exceso de azúcares,
+                        grasas o sodio aportan menos nutrientes.
+                        Si se consumen frecuentemente, pueden
+                        desplazar opciones más variadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* =========================================
+       AGUA
+    ========================================= */
+
+    else if (opcion === "agua") {
+
+        titulo.textContent = "AGUA";
+
+        texto.textContent =
+            "¿Qué elegirías para acompañar tu recreo? Presiona una imagen.";
+
+
+        comparacion.innerHTML = `
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN A
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/agua-a.png"
+                    alt="Agua mineral"
+                    onclick="mostrarTexto('aguaA')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="aguaA"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        BENEFICIOS DEL AGUA
+                    </h4>
+
+                    <p>
+                        El agua ayuda a mantener una adecuada
+                        hidratación. Es una opción sencilla para
+                        acompañar nuestra jornada escolar y no
+                        contiene azúcares añadidos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN B
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/agua-b.png"
+                    alt="Gaseosa"
+                    onclick="mostrarTexto('aguaB')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="aguaB"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        CONSECUENCIAS DEL CONSUMO FRECUENTE
+                    </h4>
+
+                    <p>
+                        Muchas gaseosas contienen una cantidad
+                        elevada de azúcares. Su consumo frecuente
+                        puede afectar la salud y no reemplaza al
+                        agua como principal opción de hidratación.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* =========================================
+       HELADOS
+    ========================================= */
+
+    else if (opcion === "helados") {
+
+        titulo.textContent = "HELADOS";
+
+        texto.textContent =
+            "Compara estas dos opciones y presiona una imagen para conocer más.";
+
+
+        comparacion.innerHTML = `
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN A
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/marciano.png"
+                    alt="Marciano de fruta"
+                    onclick="mostrarTexto('heladoA')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="heladoA"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        BENEFICIOS
+                    </h4>
+
+                    <p>
+                        Un marciano preparado principalmente con
+                        fruta puede aportar algunos de los nutrientes
+                        presentes en ella. Su composición depende de
+                        los ingredientes utilizados y de la cantidad
+                        de azúcar añadida.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN B
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/helado-industrial.png"
+                    alt="Helado industrial"
+                    onclick="mostrarTexto('heladoB')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="heladoB"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        ¿QUÉ DEBEMOS CONSIDERAR?
+                    </h4>
+
+                    <p>
+                        Algunos helados industriales pueden contener
+                        cantidades importantes de azúcares y grasas.
+                        Por eso es recomendable revisar su información
+                        nutricional y considerar la frecuencia de consumo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* =========================================
+       COMIDAS
+    ========================================= */
+
+    else if (opcion === "comidas") {
+
+        titulo.textContent = "COMIDAS";
+
+        texto.textContent =
+            "Compara estas dos comidas y presiona una imagen para conocer más.";
+
+
+        comparacion.innerHTML = `
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN A
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/causa.png"
+                    alt="Causa"
+                    onclick="mostrarTexto('comidaA')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="comidaA"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        BENEFICIOS
+                    </h4>
+
+                    <p>
+                        La causa puede aportar energía y nutrientes
+                        dependiendo de sus ingredientes. Puede incluir
+                        papa, verduras y fuentes de proteína, formando
+                        parte de una comida variada.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="opcion-interactiva">
+
+                <h3>
+                    OPCIÓN B
+                </h3>
+
+                <img
+                    class="imagen-interactiva"
+                    src="imagenes/broaster-chaufa.png"
+                    alt="Pollo broaster con chaufa"
+                    onclick="mostrarTexto('comidaB')"
+                >
+
+                <p class="mensaje-clic">
+                    PRESIONA LA IMAGEN PARA VER MÁS
+                </p>
+
+
+                <div
+                    id="comidaB"
+                    class="texto-interactivo"
+                >
+
+                    <h4>
+                        ¿QUÉ DEBEMOS CONSIDERAR?
+                    </h4>
+
+                    <p>
+                        Esta preparación puede aportar energía y
+                        proteínas, pero al ser una comida frita y
+                        acompañada de chaufa puede contener cantidades
+                        elevadas de grasa y sodio. Lo importante es
+                        considerar la frecuencia y variedad de nuestra
+                        alimentación.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* =========================================
+       BAJAR A LA COMPARACIÓN
+    ========================================= */
+
+    setTimeout(function() {
+
+        seccionComparacion.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+    }, 100);
+
+}
+
+
+
+/* =========================================
+   MOSTRAR / OCULTAR INFORMACIÓN
+========================================= */
+
+function mostrarTexto(id) {
+
+    const elemento =
+        document.getElementById(id);
+
+    elemento.classList.toggle("mostrar");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
